@@ -1,18 +1,10 @@
-/* ==UserStyle==
-@name         t-inter-unstable
-@version      2025.3.6
-@namespace    https://userstyles.world/user/softonicblip
-@author       softonicblip
-@license      No License
-==/UserStyle== */
 /*
 {
-  "name": "Inter",
+  "name": "tidal-inter",
   "author": "softonicblip",
-  "description": "desc"
+  "description": "some theme"
 }
 */
-@-moz-document domain("listen.tidal.com") {
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 	html * {
@@ -266,4 +258,3 @@
 		backdrop-filter: blur(8px) !important;
 		background: rgba(0, 0, 0, .8) !important;
 	}
-}
