@@ -5,14 +5,13 @@
   "description": "some theme"
 }
 */
-/* FONT IMPORT */
+
 @font-face {
   font-family: 'Inter Tight';
   font-style: normal;
   font-weight: 100 900;
   src: url(https://fonts.gstatic.com/s/intertight/v8/NGSwv5HMAFg6IuGlBNMjxLsJ8ah8QA.woff2) format('woff2');
 }
-/* FONT IMPORT */
 
 	* {
 	    font-family: 'Inter Tight', sans-serif !important;
@@ -56,9 +55,7 @@
 		background-blend-mode: normal !important;
 		background-image: linear-gradient(180deg, var(--wave-color-opacity-base-fill-thick) 0, rgb(18, 18, 18) 100%), var(--img) !important;
 	}
-	/* OUTDATED .css-1ibt6cr{
-	background: linear-gradient(180.04deg, rgba(12, 12, 12, 0.7) 0px, hsl(0, 0%, 6%) 99.96%);
-} */
+
 	/* NOW PLAYING - ACTIVE LINE LYRICS / GLOW */
 	span[data-current=true] {
 		color: #fff !important;
@@ -163,11 +160,10 @@
 		overflow: hidden;
 	}
 
-	/*-----*/
-	/*     */
-	/* WIP */
-	/*     */
-	/*-----*/
+/*-----*/
+/* WIP */
+/*-----*/
+
 	/* NOW PLAYING - LYRICS HEIGHT SPACING (gotta work on this) */
 	.lyrics--ya00J {
 		line-height: 10px !important;
@@ -197,28 +193,10 @@
 		margin-right: 60px !important;
 	}
 
+/*-----*/
+/* WIP */
+/*-----*/
 
-	/* MOBILE */
-	/* NOW PLAYING - COVER ART TRANSFORM*/
-	@media (max-width: 576px) {
-		.container--Tbmr0.trackContainerMediaQuery--dNw99 .albumImage--i2CqD {
-			/* margin: 0 auto; */
-			max-width: calc(100% - 48px);
-			width: 25vh;
-		}
-	}
-
-	/*-------------------------*/
-	/*     */
-	/*     */
-	/*     */
-	/* WIP */
-	/* WIP */
-	/* WIP */
-	/*     */
-	/*     */
-	/*     */
-	/*-------------------------*/
 	/* TRANSPARENT PLAYER */
 	._player_1d16b04._notFullscreen_a82939e {
 		background: rgba(0, 0, 0, 0) !important;
