@@ -1,0 +1,269 @@
+/* ==UserStyle==
+@name         t-inter-unstable
+@version      2025.3.6
+@namespace    https://userstyles.world/user/softonicblip
+@author       softonicblip
+@license      No License
+==/UserStyle== */
+/*
+{
+  "name": "Inter",
+  "author": "softonicblip",
+  "description": "desc"
+}
+*/
+@-moz-document domain("listen.tidal.com") {
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+	html * {
+		font-family: 'Inter Tight' !important;
+		box-shadow: none !important;
+		cursor: default !important;
+		/*letter-spacing: -.1px !important;*/
+	}
+
+	:root {
+		--wave-border-radius--extra-small: 2px;
+		--wave-border-radius--small: 8px;
+
+		--wave-font-weight--medium: 400;
+
+		--wave-color-solid-base-fill: hsl(240, 0%, 7%);
+		--wave-color-solid-base-brighter: hsl(240, 0%, 6%);
+		/* sidebar?*/
+		--user-profile-linear-gradient: #2a2a2a;
+		--wave-color-solid-accent-fill: hsl(240, 100%, 70%);
+		--wave-color-solid-base-brightest: hsl(240, 30%, 15%);
+		/* sidebar buttons hover */
+		--sidebarWidth: 310px;
+	}
+
+	/* REPLACE CYAN COLOR */
+	[data-wave-color=textUrl] {
+		color: var(--wave-color-solid-accent-fill);
+	}
+
+	/* HOME - TOP CARDS */
+	._shortcutItem_6c8e7b4:after {
+		background: #000000ab !important;
+		backdrop-filter: blur(12px);
+	}
+
+	/* ALBUM HEADER GRADIENT COLOR */
+	._dataContainer_66f4f40:before {
+		background-blend-mode: normal !important;
+		background-image: linear-gradient(180deg, var(--wave-color-opacity-base-fill-thick) 0, rgb(18, 18, 18) 100%), var(--img) !important;
+	}
+	/* OUTDATED .css-1ibt6cr{
+	background: linear-gradient(180.04deg, rgba(12, 12, 12, 0.7) 0px, hsl(0, 0%, 6%) 99.96%);
+} */
+	/* NOW PLAYING - ACTIVE LINE LYRICS / GLOW */
+	span[data-current=true] {
+		color: #fff !important;
+		line-height: 40px !important;
+		font-size: 34px !important;
+		opacity: 1;
+		font-weight: 800 !important;
+		-webkit-animation: glow 2s ease-in-out alternate;
+		-moz-animation: glow 2s ease-in-out alternate;
+		animation: glow 2s ease-in-out alternate;
+	}
+	@-webkit-keyframes glow {
+		0% {
+			text-shadow: 0 0 0px hsla(0, 0%, 100%, 0);
+		}
+		50% {
+			text-shadow: 0 0 15px hsla(0, 0%, 100%, .35);
+		}
+		100% {
+			text-shadow: 0 0 0px hsla(0, 0%, 100%, 0);
+		}
+	}
+
+	/* NOW PLAYING - LYRICS SMOOTH TRANSITION */
+	._lyricsContainer_fa37c08 span {
+		color: rgba(255, 255, 255, .4);
+		transition: 300ms !important;
+		/* (0.86,0,0.07,1) -- (0.77,0,0.18,1)*/
+		transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+	}
+
+	/* NOW PLAYING - LYRICS HOVER */
+	._lyricsContainer_fa37c08 span:hover {
+		transition: 75ms ease-in-out !important;
+		color: rgb(255, 255, 255);
+	}
+
+	/* NOW PLAYING - LYRICS CLICK ANIMATION */
+	._lyricsContainer_fa37c08 span:active {
+		transition: 100ms ease-in-out !important;
+		color: rgba(255, 255, 255, .25);
+		font-weight: 500;
+	}
+
+	/* NOW PLAYING - SCREEN */
+	._nowPlayingContainer_378ac1a {
+		transition: 250ms !important;
+		backdrop-filter: /*invert(1)*/
+		grayscale(1) blur(64px);
+		background: rgba(0, 0, 0, .4);
+	}
+
+	/* NOW PLAYING - COVER SIZE */
+	@media (min-width: 1024px) {
+		._leftColumn_52725d9._albumMediaQueries_714afcc {
+			grid-template-areas: "album panel";
+			grid-template-columns: minmax(142px, 23vh) minmax(234px, 1174px) !important;
+		}
+	}
+	._albumImage_6305d93 {
+		border: none !important;
+		box-shadow: 0px 0px 80px hsla(0, 0%, 0%, .4) !important;
+	}
+
+	/* NOW PLAYING - COVER TEXT ALIGN */
+	._textContainer_665d6bb {
+		padding: 0 !important;
+		text-align: left !important;
+		margin-top: 24px !important;
+	}
+	._infoWrapper_b979dc4 {
+		justify-content: left !important;
+	}
+
+	/* SEARCH BAR */
+	.container--cl4MJ {
+		/* height: 4.1vh !important; wip */
+		background: rgba(255, 255, 255, 0.1);
+		border: none !important;
+	}
+
+	/* NOW PLAYING - TOP BAR */
+	._container_ef2b9a1 {
+		justify-content: center !important;
+	}
+
+	/* NOW PLAYING - CREDITS PAGE COLOR FIX */
+	.divider--aLQjZ {
+		background-color: rgba(255, 255, 255, .1) !important;
+	}
+	[data-wave-color=textTertiary] {
+		font-weight: 500;
+		color: rgba(255, 255, 255, .3) !important;
+	}
+
+	/* MORE.. CARD */
+	.contextMenu--a963y,
+	.subMenu--xEgVU {
+		backdrop-filter: blur(32px);
+		background-color: rgba(15, 15, 15, .7) !important;
+		border: 1px solid rgba(255, 255, 255, .1);
+		overflow: hidden;
+	}
+
+	/*-----*/
+	/*     */
+	/* WIP */
+	/*     */
+	/*-----*/
+	/* NOW PLAYING - LYRICS HEIGHT SPACING (gotta work on this) */
+	.lyrics--ya00J {
+		line-height: 10px !important;
+		/* line-height: 0.95 !important; this one actually fixes the line spacing issue*/
+	}
+
+	/* NOW PLAYING - LYRICS GRADIENT OPACITY*/
+	.lyricsContainer--qyf_o {
+		mask-image: linear-gradient(180deg, #fff 20%, #fff 40%, #fff0 90%) !important;
+	}
+
+	/* ARTIST PAGE - MAIN BUTTONS */
+	.button--XV8ps {
+		gap: 0 !important;
+	}
+
+	/* HORIZONTAL PLAYER (not responsive tho) */
+	._playbackControlsContainer_5bb455e {
+		flex-direction: row !important;
+		place-items: center !important;
+		justify-content: center !important;
+	}
+	._playbackControlsContainer_5bb455e ._progress_a299dc2 {
+		transform: none !important;
+	}
+	._playbackControls_619acbd {
+		margin-right: 60px !important;
+	}
+
+
+	/* MOBILE */
+	/* NOW PLAYING - COVER ART TRANSFORM*/
+	@media (max-width: 576px) {
+		.container--Tbmr0.trackContainerMediaQuery--dNw99 .albumImage--i2CqD {
+			/* margin: 0 auto; */
+			max-width: calc(100% - 48px);
+			width: 25vh;
+		}
+	}
+
+	/*-------------------------*/
+	/*     */
+	/*     */
+	/*     */
+	/* WIP */
+	/* WIP */
+	/* WIP */
+	/*     */
+	/*     */
+	/*     */
+	/*-------------------------*/
+	/* TRANSPARENT PLAYER */
+	._player_1d16b04._notFullscreen_a82939e {
+		background: rgba(0, 0, 0, 0) !important;
+	}
+
+	/* PLAYER - MAX BADGE*/
+	._wave-badge-color-max_1oxl7_22 {
+		background-color: #fff !important;
+		color: #000 !important;
+		font-weight: 900 !important;
+	}
+
+	/* PLAYER - HIGH BADGE*/
+	._wave-badge-color-high_1oxl7_17 {
+		background-color: #000 !important;
+		color: #fff !important;
+		border: 1px solid rgba(255, 255, 255, .1);
+		font-weight: 900 !important;
+	}
+
+	/* PLAYER - HIDE CURRENT QUALITY */
+	.container--ocBaJ {
+		display: none !important;
+	}
+
+	/* NOW PLAYING - REMOVE ANNOYING GRADIENT (cya) */
+	._bottomGradient_5c344de {
+		display: none !important;
+	}
+
+	/* NOW PLAYING - REMOVE MUSIXMATCH LOGO + ADD SPACING */
+	._lyricsProvider_56c7fb5 {
+		margin-bottom: 375px !important;
+		transform: scaleY(6) !important;
+		opacity: 0 !important;
+	}
+
+	/* NOW PLAYING - COVER ART HOVER */
+	._albumImageOverlay_2eabc2b {
+		background-color: rgba(0, 0, 0, .8) !important;
+		backdrop-filter: blur(12px) !important;
+		border-radius: 12px !important;
+	}
+
+	/* ALBUM PAGE - COVER ART HOVER */
+	:is(.dataContainer--u94FB .coverArtContainer--KbeGt) .creditsOverlay--DJ8CJ {
+		backdrop-filter: blur(8px) !important;
+		background: rgba(0, 0, 0, .8) !important;
+	}
+}
