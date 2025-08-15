@@ -2,7 +2,7 @@
 {
   "name": "tidal-inter",
   "author": "softonicblip",
-  "description": "some theme"
+  "description": "v2025.08.15"
 }
 */
 
@@ -42,12 +42,6 @@
 	/* REPLACE CYAN COLOR */
 	[data-wave-color=textUrl] {
 		color: var(--wave-color-solid-accent-fill);
-	}
-
-	/* HOME - TOP CARDS */
-	._shortcutItem_6c8e7b4:after {
-		background: #000000ab !important;
-		backdrop-filter: blur(12px);
 	}
 
 	/* ALBUM HEADER GRADIENT COLOR */
