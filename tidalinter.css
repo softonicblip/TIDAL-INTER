@@ -2,7 +2,7 @@
 {
   "name": "tidal-inter",
   "author": "softonicblip",
-  "description": "v2025.08.15"
+  "description": "v2025.08.25"
 }
 */
 
@@ -154,8 +154,8 @@
 		/* line-height: 0.95 !important; this one actually fixes the line spacing issue*/
 	}
 
-	/* NOW PLAYING - LYRICS GRADIENT OPACITY*/
-	.lyricsContainer--qyf_o {
+	/* NOW PLAYING - LYRICS GRADIENT OPACITY */
+	._lyricsContainer_fa37c08 {
 		mask-image: linear-gradient(180deg, #fff 20%, #fff 40%, #fff0 90%) !important;
 	}
 
@@ -170,6 +170,18 @@
 	}
 	._playbackControls_619acbd {
 		margin-right: 60px !important;
+	}
+
+	/* NOW PLAYING - TAB OVERLAP FIX */
+	@media screen and (width >= 1200px) {
+    ._tabPanelStyles_d7b9f59._playQueueTab_3d4dd13._isActive_d486835 {
+        height: calc(100svh - 360px);
+    	}
+	}
+
+	/* PLAYER - RESPONSIVE */
+	._player_1d16b04 {
+    grid-auto-columns: auto;
 	}
 
 /*-----*/
@@ -191,9 +203,9 @@
 
 	/* HIGH */
 	._wave-badge-color-high_1oxl7_17 {
-		background-color: #000 !important;
+		background-color: transparent !important;
 		color: #fff !important;
-		border: 1px solid rgba(255, 255, 255, .1);
+		border: 1px solid rgba(255, 255, 255, 0.1);
 		font-weight: 900 !important;
 	}
 
