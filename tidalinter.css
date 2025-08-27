@@ -2,7 +2,7 @@
 {
   "name": "tidal-inter",
   "author": "softonicblip",
-  "description": "v2025.08.25"
+  "description": "v2025.08.27"
 }
 */
 
@@ -57,8 +57,6 @@
 		font-size: 34px !important;
 		opacity: 1;
 		font-weight: 800 !important;
-		-webkit-animation: glow 2s ease-in-out alternate;
-		-moz-animation: glow 2s ease-in-out alternate;
 		animation: glow 2s ease-in-out alternate;
 	}
 	@keyframes glow {
@@ -98,7 +96,7 @@
 	._nowPlayingContainer_378ac1a {
 		transition: 250ms !important;
 		backdrop-filter: /*invert(1)*/
-		grayscale(0) blur(64px);
+		grayscale(.5) blur(128px);
 		background: rgba(0, 0, 0, .4);
 	}
 
@@ -156,7 +154,7 @@
 
 	/* NOW PLAYING - LYRICS GRADIENT OPACITY */
 	._lyricsContainer_fa37c08 {
-		mask-image: linear-gradient(180deg, #fff 20%, #fff 40%, #fff0 90%) !important;
+		mask-image: linear-gradient(180deg, #fff 20%, #fff 70%, #fff0 90%) !important;
 	}
 
 	/* HORIZONTAL PLAYER (not responsive tho) */
